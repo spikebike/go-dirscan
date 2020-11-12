@@ -55,7 +55,7 @@ func main() {
    doneResults := make(chan result)
    dirNames <- os.Args[1]
    numDirW,_ = strconv.Atoi(os.Args[2])
-   fmt.Printf("works = %d\n",numDirW)
+   fmt.Printf("workers = %d\n",numDirW)
    for i := 0; i < numDirW; i++ {
       go dirWorker(dirNames, doneResults)
    }
