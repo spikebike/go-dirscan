@@ -53,7 +53,7 @@ func main() {
    var numName, numDir, totalSize int64
    dirNames := make(chan string, 1048576)
    doneResults := make(chan result)
-   dirNames <- os.Args[1] // start with current dir
+   dirNames <- os.Args[1]
    numDirW,_ = strconv.Atoi(os.Args[2])
    fmt.Printf("works = %d\n",numDirW)
    for i := 0; i < numDirW; i++ {
